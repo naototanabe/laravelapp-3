@@ -33,3 +33,14 @@ Route::get('hello/del', 'HelloController@del');
 Route::post('hello/del', 'HelloController@remove');
 
 Route::get('hello/show', 'HelloController@show');
+
+Route::get('person', 'PersonController@index');
+
+Route::get('person/find', 'PersonController@find');
+Route::post('person/find', 'personController@search');
+
+Route::get('person/add', 'PersonController@add');
+Route::post('person/add', 'PersonController@create');
+
+Route::get('person/edit', 'PersonController@edit');
+Route::post('person/edit', 'PersonController@update');
