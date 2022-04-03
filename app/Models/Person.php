@@ -9,7 +9,7 @@ use App\Scopes\ScopePerson;
 
 class Person extends Model
 {
-    // use HasFactory;
+     use HasFactory;
 
     protected $guarded = array('id');
 
@@ -22,6 +22,11 @@ class Person extends Model
     public function getData()
     {
         return $this->id . ':' . $this->name . '(' . $this->age . ')';
+    }
+
+    public function board()
+    {
+        return $this->hasOne('App\Models\Board');
     }
 
     // public function scopeNameEqual($query, $str)
